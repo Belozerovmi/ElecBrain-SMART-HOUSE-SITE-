@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>ElecBrain</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <div class="header--inner inner">
+          <div class="logo">
+            <a href="index.html">
+              <p>ElecBrain</p>
+            </a>
+          </div>
+          <div class="search--header">
+            <div class="search-wrapper">
+              <input class="search-input" type="text" placeholder="Поиск" />
+              <button class="search-button" aria-label="search">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="11" cy="11" r="7" />
+                  <line x1="16.5" y1="16.5" x2="20" y2="20" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="nav">
+            <ul>
+              <li>
+                <a href="index.html"><p>Главная</p></a>
+              </li>
+              <li>
+                <a href="catalog.html"><p>Каталог</p></a>
+              </li>
+              <li>
+                <a href="#"><p>О нас</p></a>
+              </li>
+              <li>
+                <a href="#"><p>FAQs</p></a>
+              </li>
+            </ul>
+          </div>
+          <div class="header--buttons">
+            <button class="theme-toggle" aria-label="Переключить тему">
+              <svg class="moon-icon" viewBox="0 0 24 24">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+              </svg>
+              <svg class="sun-icon" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="5" />
+                <line x1="12" y1="3" x2="12" y2="1" />
+                <line x1="12" y1="23" x2="12" y2="21" />
+                <line x1="20.66" y1="4.66" x2="22.22" y2="3.11" />
+                <line x1="1.78" y1="20.89" x2="3.34" y2="19.34" />
+                <line x1="20.66" y1="19.34" x2="22.22" y2="20.89" />
+                <line x1="1.78" y1="3.11" x2="3.34" y2="4.66" />
+                <line x1="4.66" y1="20.66" x2="3.11" y2="22.22" />
+                <line x1="20.89" y1="1.78" x2="19.34" y2="3.34" />
+                <line x1="20.89" y1="22.22" x2="19.34" y2="20.66" />
+                <line x1="4.66" y1="3.34" x2="3.11" y2="1.78" />
+              </svg>
+            </button>
+            <button class="dark--btn" type="submit">Войти</button>
+            <div class="burger-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Мобильное меню -->
+      <div class="mobile-nav">
+        <ul>
+          <li>
+            <a href="index.html">Главная</a>
+          </li>
+          <li>
+            <a href="#">Каталог</a>
+          </li>
+          <li>
+            <a href="#">О нас</a>
+          </li>
+          <li>
+            <a href="#">FAQs</a>
+          </li>
+        </ul>
+      </div>
+      <div class="overlay"></div>
+
+      <div class="main--section">
+        <div class="main--section--inner inner">
+          <div class="container">
+            <h1 class="title">ElecBrain</h1>
+            <div class="photo-wrapper">
+              <div class="photo-with-gradient"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="why--us--section">
+        <div class="why--us--section--inner">
+          <div class="accordion-wrapper">
+            <h2 class="heading">Почему выбирают нас</h2>
+
+            <div class="accordion-item">
+              <button
+                class="accordion-button"
+                aria-expanded="true"
+                aria-controls="panel-1"
+                id="accordion-1"
+              >
+                Умные колонки и голосовые ассистенты
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div
+                id="panel-1"
+                role="region"
+                aria-labelledby="accordion-1"
+                class="accordion-content expanded"
+              >
+                Наши умные колонки и голосовые ассистенты интегрируются во все
+                экосистемы вашего дома. Они позволяют управлять техникой,
+                освещением и климатом с помощью простых голосовых команд,
+                создавая по-настоящему интерактивную среду
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button
+                class="accordion-button"
+                aria-expanded="false"
+                aria-controls="panel-2"
+                id="accordion-2"
+              >
+                Системы безопасности и автоматизации
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div
+                id="panel-2"
+                role="region"
+                aria-labelledby="accordion-2"
+                class="accordion-content"
+              >
+                Современные системы безопасности обеспечивают круглосуточный
+                контроль за вашим домом. Умные датчики, камеры видеонаблюдения и
+                автоматизированные протоколы защиты создают многоуровневую
+                систему безопасности, которая оперативно реагирует на любые
+                нештатные ситуации
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button
+                class="accordion-button"
+                aria-expanded="false"
+                aria-controls="panel-3"
+                id="accordion-3"
+              >
+                Умное освещение и климат-контроль
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div
+                id="panel-3"
+                role="region"
+                aria-labelledby="accordion-3"
+                class="accordion-content"
+              >
+                Интеллектуальные системы освещения и климата адаптируются под
+                ваш распорядок дня и природные условия. Автоматическая
+                регулировка температуры, влажности и освещённости создаёт
+                идеальный микроклимат при оптимальном энергопотреблении
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button
+                class="accordion-button"
+                aria-expanded="false"
+                aria-controls="panel-4"
+                id="accordion-4"
+              >
+                Проектирование и установка
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div
+                id="panel-4"
+                role="region"
+                aria-labelledby="accordion-4"
+                class="accordion-content"
+              >
+                Наши специалисты разрабатывают индивидуальные решения под
+                особенности вашего пространства. Полный цикл работ — от
+                проектирования до пусконаладки — гарантирует бесшовную
+                интеграцию всех элементов умного дома в единую экосистему
+              </div>
+            </div>
+          </div>
+          <div class="photo-grid">
+            <div class="photo-top-left">
+              <img src="images/grid--image--small.png" alt="Колонки 1" />
+            </div>
+            <div class="photo-bottom-left">
+              <img src="images/grid--image--small--2.png" alt="Колонки 2" />
+            </div>
+            <div class="photo-large">
+              <img src="images/grid--image--big.png" alt="Большая колонка" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo--of--production">
+        <h2>Инновации<br />Комфорт<br />Безопасность</h2>
+        <img
+          class="left--speakers--html--banner--photo"
+          src="images/КОЛОНКИ СЛЕВА.png"
+          alt=""
+        />
+        <img
+          class="camera--html--banner--photo"
+          src="images/ВИДЕОКАМЕРА.png"
+          alt=""
+        />
+        <img
+          class="right--speaker--html--banner--photo"
+          src="images/КОЛОНКА СПРАВА.png"
+          alt=""
+        />
+      </div>
+
+      <div class="make--another--choice">
+        <div class="make--another--choice--inner">
+          <div class="title--make--another--choice">
+            <h3>
+              Сделайте выбор<br />
+              в сторону удобства
+            </h3>
+          </div>
+          <div class="items-row">
+            <div class="img-placeholder img-1">
+              <a href="#"><img src="images/first--img--card.png" alt="" /></a>
+            </div>
+            <div class="caption-block">
+              <div class="caption-row">
+                <div class="caption-title">Портативные Устройства</div>
+                <div class="arrow-circle">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="m14 18l-1.4-1.45L16.15 13H4v-2h12.15L12.6 7.45L14 6l6 6z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="img-placeholder img-2">
+                <a href="#">
+                  <img src="images/second--img--card.png" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="img-placeholder img-3">
+              <a href="#"> <img src="images/third--img--card.png" alt="" /></a>
+            </div>
+            <div class="img-placeholder img-4">
+              <a href="#"> <img src="images/fouth--img--card.png" alt="" /></a>
+            </div>
+          </div>
+          <div class="under--cards">
+            <div class="description">
+              Портативные гаджеты сочетают мобильность и мощный функционал для
+              управления умным домом. Автономная работа и простой запуск
+              позволяют начать использование сразу после распаковки
+            </div>
+            <button class="btn-learn dark--btn">Подробнее</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="UPGRADE--YOUR--LIFE">
+        <div class="UPGRADE--YOUR--LIFE--inner">
+          <div class="left--side--upgrade--your--life">
+            <h1>Новый уровень комфорта</h1>
+            <p>
+              Голосовые ассистенты, автоматизированные системы и умные девайсы —
+              всё для того, чтобы ваш дом стал современным, безопасным и
+              комфортным
+            </p>
+            <button class="btn-learn light--btn">Подробнее</button>
+          </div>
+          <div class="right--side--upgrade--your--life">
+            <img src="images/image.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="description--of--gadgets">
+        <hr />
+        <div class="first--description--of--gadget--central">
+          <div
+            class="first--description--of--gadget gadget--item--disply--flex"
+          >
+            <div class="left--side--description--of--gadget">
+              <h1>Умные устройства для дома</h1>
+            </div>
+            <div class="right--side--description--of--gadget">
+              <p>
+                Умный дом — это система, обеспечивающая круглосуточную
+                безопасность, комфорт и удобство в вашем доме
+              </p>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="first--description--of--gadget--central">
+          <div
+            class="first--description--of--gadget gadget--item--disply--flex"
+          >
+            <div class="left--side--description--of--gadget">
+              <h1>Портативные гаджеты</h1>
+            </div>
+            <div class="right--side--description--of--gadget">
+              <p>
+                Это компактные и мобильные умные устройства, которые можно легко
+                переносить из комнаты в комнату или брать с собой
+              </p>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="first--description--of--gadget--central">
+          <div
+            class="first--description--of--gadget gadget--item--disply--flex"
+          >
+            <div class="left--side--description--of--gadget">
+              <h1>Домашние развлечения</h1>
+            </div>
+            <div class="right--side--description--of--gadget">
+              <p>
+                Эта категория включает в себя устройства, предназначенные для
+                аудио- и видеоконтента, игр и создания мультимедийной среды в
+                доме
+              </p>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="first--description--of--gadget--central">
+          <div
+            class="first--description--of--gadget gadget--item--disply--flex"
+          >
+            <div class="left--side--description--of--gadget">
+              <h1>Аксессуары для устройств</h1>
+            </div>
+            <div class="right--side--description--of--gadget">
+              <p>
+                Это дополнительные устройства и гаджеты, которые дополняют и
+                расширяют возможности основной техники, делают использование
+                более удобным или решают конкретные задачи
+              </p>
+            </div>
+          </div>
+        </div>
+        <hr />
+      </div>
+
+      <footer>
+        <div class="footer--inner">
+          <div class="footer--main">
+            <div class="footer--brand">
+              <div class="footer--logo">
+                <a href="index.html">
+                  <h1>ElecBrain</h1>
+                </a>
+                <p class="footer--tagline">Больше, чем просто комфорт</p>
+                <p class="footer--description">
+                  Мы создаем умные решения для вашего дома, объединяя передовые
+                  технологии с безупречным дизайном. Превратите ваше жилое
+                  пространство в цифровой оазис.
+                </p>
+              </div>
+              <div class="footer--newsletter">
+                <h3>Будьте в курсе новинок</h3>
+                <div class="newsletter--form">
+                  <input
+                    type="email"
+                    placeholder="Ваш email"
+                    class="newsletter-input"
+                  />
+                  <button class="newsletter-btn">Подписаться</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="footer--content">
+              <div class="footer--nav--sections">
+                <div class="footer--section">
+                  <h4>Навигация</h4>
+                  <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="#">Каталог</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Поддержка</a></li>
+                    <li><a href="#">Личный кабинет</a></li>
+                  </ul>
+                </div>
+
+                <div class="footer--section">
+                  <h4>Категории</h4>
+                  <ul>
+                    <li><a href="#">Умные колонки</a></li>
+                    <li><a href="#">Системы безопасности</a></li>
+                    <li><a href="#">Умное освещение</a></li>
+                    <li><a href="#">Климат-контроль</a></li>
+                    <li><a href="#">Портативные устройства</a></li>
+                    <li><a href="#">Аксессуары</a></li>
+                  </ul>
+                </div>
+
+                <div class="footer--section">
+                  <h4>Поддержка</h4>
+                  <ul>
+                    <li><a href="#">Техническая поддержка</a></li>
+                    <li><a href="#">Гарантия и сервис</a></li>
+                    <li><a href="#">Доставка и оплата</a></li>
+                    <li><a href="#">Возврат товара</a></li>
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                    <li><a href="#">Условия использования</a></li>
+                  </ul>
+                </div>
+
+                <div class="footer--section">
+                  <h4>Контакты</h4>
+                  <div class="contact-info">
+                    <div class="contact-item">
+                      <span>
+                        <a href="mailto:info@elecbrain.ru" target="_blank"
+                          >info@elecbrain.ru</a
+                        ></span
+                      >
+                    </div>
+                    <div class="contact-item">
+                      <span
+                        ><a href="tel:74951234567"> +7 (495) 123-45-67</a></span
+                      >
+                    </div>
+                    <div class="contact-item">
+                      <span>
+                        <a
+                          href="https://yandex.ru/maps/213/moscow/?display-text=Яндекс%20it&ll=37.589644%2C55.733893&mode=search&sctx=ZAAAAAgBEAAaKAoSCeSghJm2z0JAEVd4l4v43ktAEhIJ7YFWYMjqdj8RaF4Ou%2B8YXj8iBgABAgMEBSgKOABA360HSAFqAnJ1nQHNzMw9oAEAqAEAvQEzLJXtwgEpnJSnmATPwLLMjwXcg8GHigLv8qWr1wT7lb%2F1ngXJ2ZCGnATMqoHi8AKCAg%2FQr9C90LTQtdC60YEgaXSKAgCSAgCaAgxkZXNrdG9wLW1асHOwAgE%3D&sll=37.589644%2C55.733893&source=serp_navig&sspn=0.005367%2C0.001763&text=Яндекс%20it&whatshere%5Bpoint%5D=37.588153%2C55.733776&whatshere%5Bzoom%5D=16&z=18.81"
+                          target="_blank"
+                        >
+                          Москва, улица Льва Толстого, 16</a
+                        ></span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer--bottom">
+            <div class="social--media--links">
+              <h4>Мы в соцсетях:</h4>
+              <ul class="social--media">
+                <li>
+                  <a
+                    href="https://m.vk.com/"
+                    target="_blank"
+                    aria-label="ВКонтакте"
+                    class="vk"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path
+                        d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2M5.5 8.5H7c.36 0 .5.16.64.57c.72 2.1 1.93 3.93 2.43 3.93c.19 0 .28-.08.28-.55v-2.17c-.06-1-.59-1.09-.59-1.44c0-.17.14-.34.38-.34h2.31c.32 0 .42.17.42.54v2.92c0 .31.13.42.23.42c.19 0 .35-.11.69-.45c1.06-1.19 1.81-3.01 1.81-3.01c.1-.22.27-.42.64-.42h1.47c.45 0 .55.23.45.54c-.19.86-1.98 3.39-1.98 3.39c-.18.25-.22.37 0 .66c.15.21.67.65 1.01 1.06c.64.71 1.11 1.31 1.25 1.72c.12.42-.09.63-.51.63h-1.48c-.56 0-.72-.45-1.72-1.45c-.88-.84-1.23-.95-1.47-.95c-.3 0-.39.08-.39.51v1.32c0 .36-.11.57-1.05.57c-1.56 0-3.28-.95-4.49-2.7C5.5 11.24 5 9.31 5 8.92c0-.22.08-.42.5-.42z"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://web.telegram.org/"
+                    target="_blank"
+                    aria-label="Telegram"
+                    class="telegram"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <g fill="none">
+                        <g clip-path="url(#SVGXv8lpc2Y)">
+                          <path
+                            fill-rule="evenodd"
+                            d="M24 12c0 6.627-5.373 12-12 12S0 18.627 0 12S5.373 0 12 0s12 5.373 12 12M12.43 8.859q-1.75.728-6.998 3.014q-.852.339-.893.663c-.046.366.412.51 1.034.705l.263.084c.613.199 1.437.432 1.865.441q.583.012 1.302-.48q4.902-3.31 5.061-3.346c.075-.017.179-.039.249.024c.07.062.063.18.056.212c-.046.193-1.84 1.862-2.77 2.726c-.29.269-.495.46-.537.504q-.143.145-.282.279c-.57.548-.996.96.024 1.632c.49.323.882.59 1.273.856c.427.291.853.581 1.405.943q.21.14.405.28c.497.355.944.673 1.496.623c.32-.03.652-.331.82-1.23c.397-2.126 1.179-6.73 1.36-8.628a2 2 0 0 0-.02-.472a.5.5 0 0 0-.172-.325c-.143-.117-.365-.142-.465-.140c-.451.008-1.143.249-4.476 1.635"
+                            clip-rule="evenodd"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="SVGXv8lpc2Y">
+                            <path fill="#fff" d="M0 0h24v24H0z" />
+                          </clipPath>
+                        </defs>
+                      </g>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/"
+                    target="_blank"
+                    aria-label="YouTube"
+                    class="youtube"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                      <path
+                        d="M11.603 9.833L9.357 8.785C9.161 8.694 9 8.796 9 9.013v1.974c0 .217.161.319.357.228l2.245-1.048c.197-.092.197-.242.001-.334M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6s9.6-4.298 9.6-9.6S15.302.4 10 .4m0 13.5c-4.914 0-5-.443-5-3.9s.086-3.9 5-3.9s5 .443 5 3.9s-.086 3.9-5 3.9"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.tiktok.com/ru-RU/"
+                    target="_blank"
+                    aria-label="TikTok"
+                    class="tiktok"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path
+                        d="M12 2a10 10 0 1 0 10 10A10.01 10.01 0 0 0 12 2m5.939 7.713v.646a.37.37 0 0 1-.38.37a5.36 5.36 0 0 1-2.903-1.108v4.728a3.94 3.94 0 0 1-1.18 2.81a4 4 0 0 1-2.87 1.17a4.1 4.1 0 0 1-2.862-1.17a3.98 3.98 0 0 1-1.026-3.805c.159-.642.48-1.232.933-1.713a3.58 3.58 0 0 1 2.79-1.313h.82v1.703a.348.348 0 0 1-.39.348a1.918 1.918 0 0 0-1.23 3.631c.27.155.572.246.882.267c.24.01.48-.02.708-.092a1.93 1.93 0 0 0 1.313-1.816V5.754a.36.36 0 0 1 .359-.36h1.415a.36.36 0 0 1 .359.34a3.3 3.3 0 0 0 1.282 2.245a3.25 3.25 0 0 0 1.641.636a.37.37 0 0 1 .338.35z"
+                      />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="copyright">
+              <p>&copy; 2025 ElecBrain. Все права защищены.</p>
+              <div class="footer--links">
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Условия использования</a>
+                <a href="#">Карта сайта</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // Скрипт переключения темы
+      const themeToggle = document.querySelector(".theme-toggle");
+      const body = document.body;
+
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        body.setAttribute("data-theme", savedTheme);
+      }
+
+      themeToggle.addEventListener("click", () => {
+        const currentTheme = body.getAttribute("data-theme");
+        const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+        body.setAttribute("data-theme", newTheme);
+        localStorage.setItem("theme", newTheme);
+      });
+
+      // Скрипт аккордеона
+      document.querySelectorAll(".accordion-button").forEach((button) => {
+        button.addEventListener("click", () => {
+          const expanded = button.getAttribute("aria-expanded") === "true";
+          document.querySelectorAll(".accordion-button").forEach((btn) => {
+            btn.setAttribute("aria-expanded", "false");
+          });
+          document.querySelectorAll(".accordion-content").forEach((c) => {
+            c.classList.remove("expanded");
+          });
+          if (!expanded) {
+            button.setAttribute("aria-expanded", "true");
+            const content = document.getElementById(
+              button.getAttribute("aria-controls")
+            );
+            content.classList.add("expanded");
+          }
+        });
+      });
+
+      // Бургер меню
+      const burgerMenu = document.querySelector(".burger-menu");
+      const mobileNav = document.querySelector(".mobile-nav");
+      const overlay = document.querySelector(".overlay");
+
+      burgerMenu.addEventListener("click", () => {
+        burgerMenu.classList.toggle("active");
+        mobileNav.classList.toggle("active");
+        overlay.classList.toggle("active");
+        document.body.style.overflow = burgerMenu.classList.contains("active")
+          ? "hidden"
+          : "";
+      });
+
+      overlay.addEventListener("click", () => {
+        burgerMenu.classList.remove("active");
+        mobileNav.classList.remove("active");
+        overlay.classList.remove("active");
+        document.body.style.overflow = "";
+      });
+    </script>
+  </body>
+</html>
