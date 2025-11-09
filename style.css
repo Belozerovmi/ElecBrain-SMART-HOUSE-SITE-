@@ -9,6 +9,7 @@
   transition: background-color 0.3s ease, color 0.3s ease,
     border-color 0.3s ease;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 :root {
@@ -1140,13 +1141,23 @@ footer {
 }
 
 /* Адаптивные стили для мобильных устройств */
+
+@media (max-width: 1420px) {
+  .burger-menu {
+    display: flex;
+  }
+
+  .nav ul {
+    display: none;
+  }
+}
+
 @media (max-width: 1200px) {
   .header--inner {
     flex-wrap: wrap;
     height: auto;
     padding: 15px 20px;
   }
-
   .search--header {
     order: 3;
     width: 100%;
@@ -1275,6 +1286,9 @@ footer {
 @media (max-width: 768px) {
   .header--buttons {
     gap: 10px;
+  }
+  .login-btn {
+    display: none;
   }
 
   .theme-toggle {
