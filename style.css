@@ -266,11 +266,11 @@ button.search-button:active {
 
 /* Buttons */
 .dark--btn {
-  outline: 2px solid black;
+  outline: 2px solid rgba(0, 0, 0, 0);
   border: none;
   background-color: var(--button-bg);
   color: var(--button-text);
-  border-radius: 15px;
+  border-radius: 8px;
   padding: 12px 40px;
   cursor: pointer;
   font-size: 18px;
@@ -726,11 +726,11 @@ h2.heading {
 }
 
 .light--btn {
-  outline: 2px solid white;
+  outline: 2px solid rgb(0, 0, 0);
   border: none;
   background-color: #ffffff;
   color: #000000;
-  border-radius: 15px;
+  border-radius: 8px;
   padding: 12px 40px;
   cursor: pointer;
   font-size: 18px;

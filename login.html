@@ -10,7 +10,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>ElecBrain</title>
+    <link rel="stylesheet" href="auth.css" />
+    <title>Вход | ElecBrain</title>
   </head>
   <body>
     <div class="wrapper">
@@ -20,17 +21,6 @@
             <a href="index.html">
               <p>ElecBrain</p>
             </a>
-          </div>
-          <div class="search--header">
-            <div class="search-wrapper">
-              <input class="search-input" type="text" placeholder="Поиск" />
-              <button class="search-button" aria-label="search">
-                <svg viewBox="0 0 24 24">
-                  <circle cx="11" cy="11" r="7" />
-                  <line x1="16.5" y1="16.5" x2="20" y2="20" />
-                </svg>
-              </button>
-            </div>
           </div>
           <div class="nav">
             <ul>
@@ -67,11 +57,9 @@
                 <line x1="4.66" y1="3.34" x2="3.11" y2="1.78" />
               </svg>
             </button>
-            <a href="login.html">
-              <button class="dark--btn login-btn" type="submit">Войти</button>
-            </a>
-
-            <a href="account.html">личный кабинет</a>
+            <a href="register.html" class="dark--btn register-btn"
+              >Регистрация</a
+            >
             <div class="burger-menu">
               <span></span>
               <span></span>
@@ -97,298 +85,96 @@
             <a href="faqs.html">FAQs</a>
           </li>
           <li class="mobile-login">
-            <a href="login.html">Войти</a>
+            <a href="register.html">Регистрация</a>
           </li>
         </ul>
       </div>
       <div class="overlay"></div>
 
-      <div class="main--section">
-        <div class="main--section--inner inner">
-          <div class="container">
-            <h1 class="title">ElecBrain</h1>
-            <div class="photo-wrapper">
-              <div class="photo-with-gradient"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="why--us--section">
-        <div class="why--us--section--inner">
-          <div class="accordion-wrapper">
-            <h2 class="heading">Почему выбирают нас</h2>
-
-            <div class="accordion-item">
-              <button
-                class="accordion-button"
-                aria-expanded="true"
-                aria-controls="panel-1"
-                id="accordion-1"
-              >
-                Умные колонки и голосовые ассистенты
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </button>
-              <div
-                id="panel-1"
-                role="region"
-                aria-labelledby="accordion-1"
-                class="accordion-content expanded"
-              >
-                Наши умные колонки и голосовые ассистенты интегрируются во все
-                экосистемы вашего дома. Они позволяют управлять техникой,
-                освещением и климатом с помощью простых голосовых команд,
-                создавая по-настоящему интерактивную среду
+      <!-- Основной контент страницы входа -->
+      <main class="auth-main">
+        <div class="auth-container">
+          <div class="auth-form-section">
+            <div class="auth-form-container">
+              <div class="auth-header">
+                <h1>Вход в аккаунт</h1>
+                <p>Введите свои данные для входа в систему</p>
               </div>
-            </div>
-            <div class="accordion-item">
-              <button
-                class="accordion-button"
-                aria-expanded="false"
-                aria-controls="panel-2"
-                id="accordion-2"
-              >
-                Системы безопасности и автоматизации
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </button>
-              <div
-                id="panel-2"
-                role="region"
-                aria-labelledby="accordion-2"
-                class="accordion-content"
-              >
-                Современные системы безопасности обеспечивают круглосуточный
-                контроль за вашим домом. Умные датчики, камеры видеонаблюдения и
-                автоматизированные протоколы защиты создают многоуровневую
-                систему безопасности, которая оперативно реагирует на любые
-                нештатные ситуации
-              </div>
-            </div>
-            <div class="accordion-item">
-              <button
-                class="accordion-button"
-                aria-expanded="false"
-                aria-controls="panel-3"
-                id="accordion-3"
-              >
-                Умное освещение и климат-контроль
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </button>
-              <div
-                id="panel-3"
-                role="region"
-                aria-labelledby="accordion-3"
-                class="accordion-content"
-              >
-                Интеллектуальные системы освещения и климата адаптируются под
-                ваш распорядок дня и природные условия. Автоматическая
-                регулировка температуры, влажности и освещённости создаёт
-                идеальный микроклимат при оптимальном энергопотреблении
-              </div>
-            </div>
-            <div class="accordion-item">
-              <button
-                class="accordion-button"
-                aria-expanded="false"
-                aria-controls="panel-4"
-                id="accordion-4"
-              >
-                Проектирование и установка
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </button>
-              <div
-                id="panel-4"
-                role="region"
-                aria-labelledby="accordion-4"
-                class="accordion-content"
-              >
-                Наши специалисты разрабатывают индивидуальные решения под
-                особенности вашего пространства. Полный цикл работ — от
-                проектирования до пусконаладки — гарантирует бесшовную
-                интеграцию всех элементов умного дома в единую экосистему
-              </div>
-            </div>
-          </div>
-          <div class="photo-grid">
-            <div class="photo-top-left">
-              <img src="images/grid--image--small.png" alt="Колонки 1" />
-            </div>
-            <div class="photo-bottom-left">
-              <img src="images/grid--image--small--2.png" alt="Колонки 2" />
-            </div>
-            <div class="photo-large">
-              <img src="images/grid--image--big.png" alt="Большая колонка" />
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div class="photo--of--production">
-        <h2>Инновации<br />Комфорт<br />Безопасность</h2>
-        <img
-          class="left--speakers--html--banner--photo"
-          src="images/КОЛОНКИ СЛЕВА.png"
-          alt=""
-        />
-        <img
-          class="camera--html--banner--photo"
-          src="images/ВИДЕОКАМЕРА.png"
-          alt=""
-        />
-        <img
-          class="right--speaker--html--banner--photo"
-          src="images/КОЛОНКА СПРАВА.png"
-          alt=""
-        />
-      </div>
+              <form class="auth-form">
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="your@email.com"
+                    required
+                  />
+                </div>
 
-      <div class="make--another--choice">
-        <div class="make--another--choice--inner">
-          <div class="title--make--another--choice">
-            <h3>
-              Сделайте выбор<br />
-              в сторону удобства
-            </h3>
-          </div>
-          <div class="items-row">
-            <div class="img-placeholder img-1">
-              <a href="#"><img src="images/first--img--card.png" alt="" /></a>
-            </div>
-            <div class="caption-block">
-              <div class="caption-row">
-                <div class="caption-title">Портативные Устройства</div>
-                <div class="arrow-circle">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
+                <div class="form-group">
+                  <label for="password">Пароль</label>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Введите ваш пароль"
+                    required
+                  />
+                </div>
+
+                <div class="form-options">
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="remember" />
+                    <span class="checkmark"></span>
+                    Запомнить меня
+                  </label>
+                  <a href="#" class="forgot-password">Забыли пароль?</a>
+                </div>
+
+                <button type="submit" class="auth-submit-btn dark--btn">
+                  Войти
+                </button>
+              </form>
+
+              <div class="auth-divider">
+                <span>Или войдите с помощью</span>
+              </div>
+
+              <div class="social-auth">
+                <button type="button" class="social-btn google-btn">
+                  <svg width="18" height="18" viewBox="0 0 24 24">
                     <path
-                      fill="currentColor"
-                      d="m14 18l-1.4-1.45L16.15 13H4v-2h12.15L12.6 7.45L14 6l6 6z"
+                      fill="#4285F4"
+                      d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                    />
+                    <path
+                      fill="#34A853"
+                      d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                    />
+                    <path
+                      fill="#FBBC05"
+                      d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                    />
+                    <path
+                      fill="#EA4335"
+                      d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
                     />
                   </svg>
-                </div>
+                  Google
+                </button>
               </div>
-              <div class="img-placeholder img-2">
-                <a href="#">
-                  <img src="images/second--img--card.png" alt="" />
-                </a>
+
+              <div class="auth-switch">
+                <p>
+                  Нет аккаунта? <a href="register.html">Зарегистрироваться</a>
+                </p>
               </div>
             </div>
-            <div class="img-placeholder img-3">
-              <a href="#"> <img src="images/third--img--card.png" alt="" /></a>
-            </div>
-            <div class="img-placeholder img-4">
-              <a href="#"> <img src="images/fouth--img--card.png" alt="" /></a>
-            </div>
-          </div>
-          <div class="under--cards">
-            <div class="description">
-              Портативные гаджеты сочетают мобильность и мощный функционал для
-              управления умным домом. Автономная работа и простой запуск
-              позволяют начать использование сразу после распаковки
-            </div>
-            <button class="btn-learn dark--btn">Подробнее</button>
           </div>
         </div>
-      </div>
-
-      <div class="UPGRADE--YOUR--LIFE">
-        <div class="UPGRADE--YOUR--LIFE--inner">
-          <div class="left--side--upgrade--your--life">
-            <h1>Новый уровень комфорта</h1>
-            <p>
-              Голосовые ассистенты, автоматизированные системы и умные девайсы —
-              всё для того, чтобы ваш дом стал современным, безопасным и
-              комфортным
-            </p>
-            <button class="btn-learn light--btn">Подробнее</button>
-          </div>
-          <div class="right--side--upgrade--your--life">
-            <img src="images/image.png" alt="" />
-          </div>
-        </div>
-      </div>
-
-      <div class="description--of--gadgets">
-        <hr />
-        <div class="first--description--of--gadget--central">
-          <div
-            class="first--description--of--gadget gadget--item--disply--flex"
-          >
-            <div class="left--side--description--of--gadget">
-              <h1>Умные устройства для дома</h1>
-            </div>
-            <div class="right--side--description--of--gadget">
-              <p>
-                Умный дом — это система, обеспечивающая круглосуточную
-                безопасность, комфорт и удобство в вашем доме
-              </p>
-            </div>
-          </div>
-        </div>
-        <hr />
-        <div class="first--description--of--gadget--central">
-          <div
-            class="first--description--of--gadget gadget--item--disply--flex"
-          >
-            <div class="left--side--description--of--gadget">
-              <h1>Портативные гаджеты</h1>
-            </div>
-            <div class="right--side--description--of--gadget">
-              <p>
-                Это компактные и мобильные умные устройства, которые можно легко
-                переносить из комнаты в комнату или брать с собой
-              </p>
-            </div>
-          </div>
-        </div>
-        <hr />
-        <div class="first--description--of--gadget--central">
-          <div
-            class="first--description--of--gadget gadget--item--disply--flex"
-          >
-            <div class="left--side--description--of--gadget">
-              <h1>Домашние развлечения</h1>
-            </div>
-            <div class="right--side--description--of--gadget">
-              <p>
-                Эта категория включает в себя устройства, предназначенные для
-                аудио- и видеоконтента, игр и создания мультимедийной среды в
-                доме
-              </p>
-            </div>
-          </div>
-        </div>
-        <hr />
-        <div class="first--description--of--gadget--central">
-          <div
-            class="first--description--of--gadget gadget--item--disply--flex"
-          >
-            <div class="left--side--description--of--gadget">
-              <h1>Аксессуары для устройств</h1>
-            </div>
-            <div class="right--side--description--of--gadget">
-              <p>
-                Это дополнительные устройства и гаджеты, которые дополняют и
-                расширяют возможности основной техники, делают использование
-                более удобным или решают конкретные задачи
-              </p>
-            </div>
-          </div>
-        </div>
-        <hr />
-      </div>
+      </main>
 
       <footer>
         <div class="footer--inner">
@@ -591,26 +377,6 @@
         localStorage.setItem("theme", newTheme);
       });
 
-      // Скрипт аккордеона
-      document.querySelectorAll(".accordion-button").forEach((button) => {
-        button.addEventListener("click", () => {
-          const expanded = button.getAttribute("aria-expanded") === "true";
-          document.querySelectorAll(".accordion-button").forEach((btn) => {
-            btn.setAttribute("aria-expanded", "false");
-          });
-          document.querySelectorAll(".accordion-content").forEach((c) => {
-            c.classList.remove("expanded");
-          });
-          if (!expanded) {
-            button.setAttribute("aria-expanded", "true");
-            const content = document.getElementById(
-              button.getAttribute("aria-controls")
-            );
-            content.classList.add("expanded");
-          }
-        });
-      });
-
       // Бургер меню
       const burgerMenu = document.querySelector(".burger-menu");
       const mobileNav = document.querySelector(".mobile-nav");
@@ -631,6 +397,15 @@
         overlay.classList.remove("active");
         document.body.style.overflow = "";
       });
+
+      // Обработка формы
+      document
+        .querySelector(".auth-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          // Здесь будет обработка входа
+          console.log("Форма отправлена");
+        });
     </script>
   </body>
 </html>

@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="account.css" />
+    <title>Личный кабинет | ElecBrain</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <div class="header--inner inner">
+          <div class="logo">
+            <a href="index.html">
+              <p>ElecBrain</p>
+            </a>
+          </div>
+          <div class="search--header">
+            <div class="search-wrapper">
+              <input class="search-input" type="text" placeholder="Поиск" />
+              <button class="search-button" aria-label="search">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="11" cy="11" r="7" />
+                  <line x1="16.5" y1="16.5" x2="20" y2="20" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="nav">
+            <ul>
+              <li>
+                <a href="index.html"><p>Главная</p></a>
+              </li>
+              <li>
+                <a href="catalog.html"><p>Каталог</p></a>
+              </li>
+              <li>
+                <a href="about.html"><p>О нас</p></a>
+              </li>
+              <li>
+                <a href="faqs.html"><p>FAQs</p></a>
+              </li>
+            </ul>
+          </div>
+          <div class="header--buttons">
+            <button class="theme-toggle" aria-label="Переключить тему">
+              <svg class="moon-icon" viewBox="0 0 24 24">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+              </svg>
+              <svg class="sun-icon" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="5" />
+                <line x1="12" y1="3" x2="12" y2="1" />
+                <line x1="12" y1="23" x2="12" y2="21" />
+                <line x1="20.66" y1="4.66" x2="22.22" y2="3.11" />
+                <line x1="1.78" y1="20.89" x2="3.34" y2="19.34" />
+                <line x1="20.66" y1="19.34" x2="22.22" y2="20.89" />
+                <line x1="1.78" y1="3.11" x2="3.34" y2="4.66" />
+                <line x1="4.66" y1="20.66" x2="3.11" y2="22.22" />
+                <line x1="20.89" y1="1.78" x2="19.34" y2="3.34" />
+                <line x1="20.89" y1="22.22" x2="19.34" y2="20.66" />
+                <line x1="4.66" y1="3.34" x2="3.11" y2="1.78" />
+              </svg>
+            </button>
+            <button class="dark--btn login-btn" type="submit">Выйти</button>
+            <div class="burger-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Мобильное меню -->
+      <div class="mobile-nav">
+        <ul>
+          <li>
+            <a href="index.html">Главная</a>
+          </li>
+          <li>
+            <a href="catalog.html">Каталог</a>
+          </li>
+          <li>
+            <a href="about.html">О нас</a>
+          </li>
+          <li>
+            <a href="faqs.html">FAQs</a>
+          </li>
+          <li class="mobile-login">
+            <a href="#">Выйти</a>
+          </li>
+        </ul>
+      </div>
+      <div class="overlay"></div>
+
+      <!-- Основной контент Личного кабинета -->
+      <main class="account-main">
+        <section class="account-hero">
+          <div class="account-hero--inner inner">
+            <h1 class="account-title">Личный кабинет</h1>
+            <p class="account-subtitle">
+              Управляйте своими заказами, данными и предпочтениями
+            </p>
+          </div>
+        </section>
+
+        <section class="account-content">
+          <div class="account-content--inner inner">
+            <!-- Боковое меню -->
+            <aside class="account-sidebar">
+              <div class="user-profile">
+                <div class="user-avatar">
+                  <img
+                    src="images/user--avatar.jpg"
+                    alt="Аватар пользователя"
+                  />
+                </div>
+                <div class="user-info">
+                  <h3 class="user-name">Иван Петров</h3>
+                  <p class="user-email">ivan.petrov@example.com</p>
+                </div>
+              </div>
+
+              <nav class="account-nav">
+                <ul>
+                  <li>
+                    <a href="#orders" class="nav-link active" data-tab="orders">
+                      <svg viewBox="0 0 24 24">
+                        <path
+                          d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2"
+                        />
+                      </svg>
+                      История заказов
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#tracking" class="nav-link" data-tab="tracking">
+                      <svg viewBox="0 0 24 24">
+                        <path
+                          d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2m0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8"
+                        />
+                        <path d="M12 6v6l4 2" />
+                      </svg>
+                      Отслеживание заказов
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#profile" class="nav-link" data-tab="profile">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                        <circle cx="12" cy="7" r="4" />
+                      </svg>
+                      Персональные данные
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#wishlist" class="nav-link" data-tab="wishlist">
+                      <svg viewBox="0 0 24 24">
+                        <path
+                          d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78"
+                        />
+                      </svg>
+                      Список желаний
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#warranty" class="nav-link" data-tab="warranty">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+                      </svg>
+                      Гарантийная документация
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </aside>
+
+            <!-- Основной контент -->
+            <div class="account-main-content">
+              <!-- История заказов -->
+              <div id="orders" class="tab-content active">
+                <div class="tab-header">
+                  <h2>История заказов</h2>
+                  <p>Все ваши предыдущие заказы</p>
+                </div>
+
+                <div class="orders-list">
+                  <div class="order-card">
+                    <div class="order-header">
+                      <div class="order-info">
+                        <h3>Заказ #EB-2025-001</h3>
+                        <span class="order-date">15 января 2025</span>
+                      </div>
+                      <div class="order-status completed">
+                        <span>Выполнен</span>
+                      </div>
+                    </div>
+                    <div class="order-items">
+                      <div class="order-item">
+                        <img
+                          src="images/catalog--photos/smart--speaker--pro.jpg"
+                          alt="Умная колонка ElecBrain Pro"
+                        />
+                        <div class="item-info">
+                          <h4>Умная колонка ElecBrain Pro</h4>
+                          <p>Количество: 1</p>
+                          <span class="item-price">12 990 ₽</span>
+                        </div>
+                      </div>
+                      <div class="order-item">
+                        <img
+                          src="images/catalog--photos/smart--lamp.png"
+                          alt="Умная лампа SmartLight"
+                        />
+                        <div class="item-info">
+                          <h4>Умная лампа SmartLight</h4>
+                          <p>Количество: 2</p>
+                          <span class="item-price">4 990 ₽</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="order-footer">
+                      <div class="order-total">
+                        <strong>Итого: 22 970 ₽</strong>
+                      </div>
+                      <button class="dark--btn order-details-btn">
+                        Детали заказа
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="order-card">
+                    <div class="order-header">
+                      <div class="order-info">
+                        <h3>Заказ #EB-2024-156</h3>
+                        <span class="order-date">3 декабря 2024</span>
+                      </div>
+                      <div class="order-status completed">
+                        <span>Выполнен</span>
+                      </div>
+                    </div>
+                    <div class="order-items">
+                      <div class="order-item">
+                        <img
+                          src="images/catalog--photos/open--doors--detector.png"
+                          alt="Система безопасности HomeGuard"
+                        />
+                        <div class="item-info">
+                          <h4>Система безопасности HomeGuard</h4>
+                          <p>Количество: 1</p>
+                          <span class="item-price">24 990 ₽</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="order-footer">
+                      <div class="order-total">
+                        <strong>Итого: 24 990 ₽</strong>
+                      </div>
+                      <button class="dark--btn order-details-btn">
+                        Детали заказа
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Отслеживание заказов -->
+              <div id="tracking" class="tab-content">
+                <div class="tab-header">
+                  <h2>Отслеживание заказов</h2>
+                  <p>Текущие статусы ваших заказов</p>
+                </div>
+
+                <div class="tracking-list">
+                  <div class="tracking-card">
+                    <div class="tracking-header">
+                      <h3>Заказ #EB-2025-003</h3>
+                      <span class="tracking-number"
+                        >Трек-номер: RB785634215RU</span
+                      >
+                    </div>
+                    <div class="tracking-status in-progress">
+                      <span>В пути</span>
+                    </div>
+                    <div class="tracking-timeline">
+                      <div class="timeline-step completed">
+                        <div class="step-dot"></div>
+                        <div class="step-info">
+                          <span>Заказ принят</span>
+                          <small>20 января, 10:30</small>
+                        </div>
+                      </div>
+                      <div class="timeline-step completed">
+                        <div class="step-dot"></div>
+                        <div class="step-info">
+                          <span>Собран</span>
+                          <small>20 января, 14:15</small>
+                        </div>
+                      </div>
+                      <div class="timeline-step completed">
+                        <div class="step-dot"></div>
+                        <div class="step-info">
+                          <span>Передан в доставку</span>
+                          <small>21 января, 09:00</small>
+                        </div>
+                      </div>
+                      <div class="timeline-step active">
+                        <div class="step-dot"></div>
+                        <div class="step-info">
+                          <span>В пути</span>
+                          <small>Ожидается 23 января</small>
+                        </div>
+                      </div>
+                      <div class="timeline-step">
+                        <div class="step-dot"></div>
+                        <div class="step-info">
+                          <span>Доставлен</span>
+                          <small>Ожидается</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="tracking-card">
+                    <div class="tracking-header">
+                      <h3>Заказ #EB-2025-002</h3>
+                      <span class="tracking-number"
+                        >Трек-номер: RB785634214RU</span
+                      >
+                    </div>
+                    <div class="tracking-status delivered">
+                      <span>Доставлен</span>
+                    </div>
+                    <div class="tracking-timeline">
+                      <div class="timeline-step completed">
+                        <div class="step-dot"></div>
+                        <div class="step-info">
+                          <span>Заказ принят</span>
+                          <small>18 января, 11:20</small>
+                        </div>
+                      </div>
+                      <div class="timeline-step completed">
+                        <div class="step-dot"></div>
+                        <div class="step-info">
+                          <span>Собран</span>
+                          <small>18 января, 16:45</small>
+                        </div>
+                      </div>
+                      <div class="timeline-step completed">
+                        <div class="step-dot"></div>
+                        <div class="step-info">
+                          <span>Передан в доставку</span>
+                          <small>19 января, 10:30</small>
+                        </div>
+                      </div>
+                      <div class="timeline-step completed">
+                        <div class="step-dot"></div>
+                        <div class="step-info">
+                          <span>Доставлен</span>
+                          <small>20 января, 15:15</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Персональные данные -->
+              <div id="profile" class="tab-content">
+                <div class="tab-header">
+                  <h2>Персональные данные</h2>
+                  <p>Управление вашей контактной информацией</p>
+                </div>
+
+                <form class="profile-form">
+                  <div class="form-section">
+                    <h3>Основная информация</h3>
+                    <div class="form-row">
+                      <div class="form-group">
+                        <label for="firstName">Имя</label>
+                        <input
+                          type="text"
+                          id="firstName"
+                          value="Иван"
+                          required
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="lastName">Фамилия</label>
+                        <input
+                          type="text"
+                          id="lastName"
+                          value="Петров"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input
+                        type="email"
+                        id="email"
+                        value="ivan.petrov@example.com"
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="phone">Телефон</label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        value="+7 (912) 345-67-89"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-section">
+                    <h3>Адрес доставки</h3>
+                    <div class="form-group">
+                      <label for="address">Адрес</label>
+                      <input
+                        type="text"
+                        id="address"
+                        value="ул. Льва Толстого, 16, кв. 45"
+                        required
+                      />
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group">
+                        <label for="city">Город</label>
+                        <input type="text" id="city" value="Москва" required />
+                      </div>
+                      <div class="form-group">
+                        <label for="postalCode">Индекс</label>
+                        <input
+                          type="text"
+                          id="postalCode"
+                          value="119021"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-section">
+                    <h3>Смена пароля</h3>
+                    <div class="form-group">
+                      <label for="currentPassword">Текущий пароль</label>
+                      <input type="password" id="currentPassword" />
+                    </div>
+                    <div class="form-group">
+                      <label for="newPassword">Новый пароль</label>
+                      <input type="password" id="newPassword" />
+                    </div>
+                    <div class="form-group">
+                      <label for="confirmPassword">Подтвердите пароль</label>
+                      <input type="password" id="confirmPassword" />
+                    </div>
+                  </div>
+
+                  <div class="form-actions">
+                    <button type="submit" class="dark--btn save-btn">
+                      Сохранить изменения
+                    </button>
+                    <button type="button" class="light--btn">Отмена</button>
+                  </div>
+                </form>
+              </div>
+
+              <!-- Список желаний -->
+              <div id="wishlist" class="tab-content">
+                <div class="tab-header">
+                  <h2>Список желаний</h2>
+                  <p>Товары, которые вы хотите приобрести</p>
+                </div>
+
+                <div class="wishlist-grid">
+                  <div class="wishlist-item">
+                    <div class="wishlist-item-image">
+                      <img
+                        src="images/catalog--photos/smart--termostat.png"
+                        alt="Умный термостат ClimatePro"
+                      />
+                    </div>
+                    <div class="wishlist-item-info">
+                      <h4>Умный термостат ClimatePro</h4>
+                      <p class="item-description">
+                        Автоматическое регулирование температуры в вашем доме
+                      </p>
+                      <div class="item-price">8 490 ₽</div>
+                      <div class="item-actions">
+                        <button class="dark--btn add-to-cart">В корзину</button>
+                        <button class="delete-btn remove-item">Удалить</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="wishlist-item">
+                    <div class="wishlist-item-image">
+                      <img
+                        src="images/catalog--photos/smart--camera--4k.png"
+                        alt="Камера наблюдения VisionX"
+                      />
+                    </div>
+                    <div class="wishlist-item-info">
+                      <h4>Камера наблюдения VisionX</h4>
+                      <p class="item-description">
+                        HD качество, ночное видение, motion detection
+                      </p>
+                      <div class="item-price">6 990 ₽</div>
+                      <div class="item-actions">
+                        <button class="dark--btn add-to-cart">В корзину</button>
+                        <button class="delete-btn remove-item">Удалить</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="wishlist-item">
+                    <div class="wishlist-item-image">
+                      <img
+                        src="images/catalog--photos/smart--LED--RGB.png"
+                        alt="Умная лампа RGB"
+                      />
+                    </div>
+                    <div class="wishlist-item-info">
+                      <h4>Умная лампа RGB</h4>
+                      <p class="item-description">
+                        LED лампа с изменением цвета и голосовым управлением
+                      </p>
+                      <div class="item-price">3 990 ₽</div>
+                      <div class="item-actions">
+                        <button class="dark--btn add-to-cart">В корзину</button>
+                        <button class="delete-btn remove-item">Удалить</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Гарантийная документация -->
+              <div id="warranty" class="tab-content">
+                <div class="tab-header">
+                  <h2>Гарантийная документация</h2>
+                  <p>Документы и гарантии на ваши устройства</p>
+                </div>
+
+                <div class="warranty-documents">
+                  <div class="warranty-card">
+                    <div class="warranty-header">
+                      <h3>Умная колонка ElecBrain Pro</h3>
+                      <span class="warranty-status active"
+                        >Гарантия активна</span
+                      >
+                    </div>
+                    <div class="warranty-info">
+                      <div class="warranty-detail">
+                        <span class="detail-label">Серийный номер:</span>
+                        <span class="detail-value">EBP-2024-789</span>
+                      </div>
+                      <div class="warranty-detail">
+                        <span class="detail-label">Дата покупки:</span>
+                        <span class="detail-value">15 января 2025</span>
+                      </div>
+                      <div class="warranty-detail">
+                        <span class="detail-label">Гарантия до:</span>
+                        <span class="detail-value">15 января 2027</span>
+                      </div>
+                      <div class="warranty-detail">
+                        <span class="detail-label">Осталось:</span>
+                        <span class="detail-value">23 месяца</span>
+                      </div>
+                    </div>
+                    <div class="warranty-actions">
+                      <button class="dark--btn">
+                        Скачать гарантийный талон
+                      </button>
+                      <button class="light--btn">
+                        Инструкция по эксплуатации
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="warranty-card">
+                    <div class="warranty-header">
+                      <h3>Система безопасности HomeGuard</h3>
+                      <span class="warranty-status active"
+                        >Гарантия активна</span
+                      >
+                    </div>
+                    <div class="warranty-info">
+                      <div class="warranty-detail">
+                        <span class="detail-label">Серийный номер:</span>
+                        <span class="detail-value">HG-2024-123789</span>
+                      </div>
+                      <div class="warranty-detail">
+                        <span class="detail-label">Дата покупки:</span>
+                        <span class="detail-value">3 декабря 2024</span>
+                      </div>
+                      <div class="warranty-detail">
+                        <span class="detail-label">Гарантия до:</span>
+                        <span class="detail-value">3 декабря 2026</span>
+                      </div>
+                      <div class="warranty-detail">
+                        <span class="detail-label">Осталось:</span>
+                        <span class="detail-value">21 месяц</span>
+                      </div>
+                    </div>
+                    <div class="warranty-actions">
+                      <button class="dark--btn">
+                        Скачать гарантийный талон
+                      </button>
+                      <button class="light--btn">
+                        Инструкция по эксплуатации
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="warranty-card expired">
+                    <div class="warranty-header">
+                      <h3>Умная лампа SmartLight</h3>
+                      <span class="warranty-status expired"
+                        >Гарантия истекла</span
+                      >
+                    </div>
+                    <div class="warranty-info">
+                      <div class="warranty-detail">
+                        <span class="detail-label">Серийный номер:</span>
+                        <span class="detail-value">SL-2023-456123</span>
+                      </div>
+                      <div class="warranty-detail">
+                        <span class="detail-label">Дата покупки:</span>
+                        <span class="detail-value">10 марта 2023</span>
+                      </div>
+                      <div class="warranty-detail">
+                        <span class="detail-label">Гарантия до:</span>
+                        <span class="detail-value">10 марта 2025</span>
+                      </div>
+                      <div class="warranty-detail">
+                        <span class="detail-label">Статус:</span>
+                        <span class="detail-value">Гарантия истекла</span>
+                      </div>
+                    </div>
+                    <div class="warranty-actions">
+                      <button class="dark--btn" disabled>
+                        Скачать гарантийный талон
+                      </button>
+                      <button class="light--btn">
+                        Инструкция по эксплуатации
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="warranty-support">
+                  <h3>Нужна помощь с гарантией?</h3>
+                  <p>
+                    Если у вас возникли проблемы с устройством или вопросы по
+                    гарантии, наша служба поддержки всегда готова помочь.
+                  </p>
+                  <div class="support-actions">
+                    <button class="dark--btn">Связаться с поддержкой</button>
+                    <button class="light--btn">
+                      Оформить гарантийный случай
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="footer--inner">
+          <div class="footer--main">
+            <div class="footer--brand">
+              <div class="footer--logo">
+                <a href="index.html">
+                  <h1>ElecBrain</h1>
+                </a>
+                <p class="footer--tagline">Больше, чем просто комфорт</p>
+                <p class="footer--description">
+                  Мы создаем умные решения для вашего дома, объединяя передовые
+                  технологии с безупречным дизайном. Превратите ваше жилое
+                  пространство в цифровой оазис.
+                </p>
+              </div>
+              <div class="footer--newsletter">
+                <h3>Будьте в курсе новинок</h3>
+                <div class="newsletter--form">
+                  <input
+                    type="email"
+                    placeholder="Ваш email"
+                    class="newsletter-input"
+                  />
+                  <button class="newsletter-btn">Подписаться</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="footer--content">
+              <div class="footer--nav--sections">
+                <div class="footer--section">
+                  <h4>Навигация</h4>
+                  <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="#">Поддержка</a></li>
+                    <li><a href="account.html">Личный кабинет</a></li>
+                  </ul>
+                </div>
+
+                <div class="footer--section">
+                  <h4>Категории</h4>
+                  <ul>
+                    <li><a href="#">Умные колонки</a></li>
+                    <li><a href="#">Системы безопасности</a></li>
+                    <li><a href="#">Умное освещение</a></li>
+                    <li><a href="#">Климат-контроль</a></li>
+                    <li><a href="#">Портативные устройства</a></li>
+                    <li><a href="#">Аксессуары</a></li>
+                  </ul>
+                </div>
+
+                <div class="footer--section">
+                  <h4>Поддержка</h4>
+                  <ul>
+                    <li><a href="#">Техническая поддержка</a></li>
+                    <li><a href="#">Гарантия и сервис</a></li>
+                    <li><a href="#">Доставка и оплата</a></li>
+                    <li><a href="#">Возврат товара</a></li>
+                    <li>
+                      <a href="privacy.html">Политика конфиденциальности</a>
+                    </li>
+                    <li><a href="terms.html">Условия использования</a></li>
+                  </ul>
+                </div>
+
+                <div class="footer--section">
+                  <h4>Контакты</h4>
+                  <div class="contact-info">
+                    <div class="contact-item">
+                      <span>
+                        <a href="mailto:info@elecbrain.ru" target="_blank"
+                          >info@elecbrain.ru</a
+                        ></span
+                      >
+                    </div>
+                    <div class="contact-item">
+                      <span
+                        ><a href="tel:74951234567"> +7 (495) 123-45-67</a></span
+                      >
+                    </div>
+                    <div class="contact-item">
+                      <span>
+                        <a
+                          href="https://yandex.ru/maps/213/moscow/?display-text=Яндекс%20it&ll=37.589644%2C55.733893&mode=search&sctx=ZAAAAAgBEAAaKAoSCeSghJm2z0JAEVd4l4v43ktAEhIJ7YFWYMjqdj8RaF4Ou%2B8YXj8iBgABAgMEBSgKOABA360HSAFqAnJ1nQHNzMw9oAEAqAEAvQEzLJXtwgEpnJSnmATPwLLMjwXcg8GHigLv8qWr1wT7lb%2F1ngXJ2ZCGnATMqoHi8AKCAg%2FQr9C90LTQtdC60YEgaXSKAgCSAgCaAgxkZXNrdG9wLW1асHOwAgE%3D&sll=37.589644%2C55.733893&source=serp_navig&sspn=0.005367%2C0.001763&text=Яндекс%20it&whatshere%5Bpoint%5D=37.588153%2C55.733776&whatshere%5Bzoom%5D=16&z=18.81"
+                          target="_blank"
+                        >
+                          Москва, улица Льва Толстого, 16</a
+                        ></span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer--bottom">
+            <div class="social--media--links">
+              <h4>Мы в соцсетях:</h4>
+              <ul class="social--media">
+                <li>
+                  <a
+                    href="https://m.vk.com/"
+                    target="_blank"
+                    aria-label="ВКонтакте"
+                    class="vk"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path
+                        d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2M5.5 8.5H7c.36 0 .5.16.64.57c.72 2.1 1.93 3.93 2.43 3.93c.19 0 .28-.08.28-.55v-2.17c-.06-1-.59-1.09-.59-1.44c0-.17.14-.34.38-.34h2.31c.32 0 .42.17.42.54v2.92c0 .31.13.42.23.42c.19 0 .35-.11.69-.45c1.06-1.19 1.81-3.01 1.81-3.01c.1-.22.27-.42.64-.42h1.47c.45 0 .55.23.45.54c-.19.86-1.98 3.39-1.98 3.39c-.18.25-.22.37 0 .66c.15.21.67.65 1.01 1.06c.64.71 1.11 1.31 1.25 1.72c.12.42-.09.63-.51.63h-1.48c-.56 0-.72-.45-1.72-1.45c-.88-.84-1.23-.95-1.47-.95c-.3 0-.39.08-.39.51v1.32c0 .36-.11.57-1.05.57c-1.56 0-3.28-.95-4.49-2.7C5.5 11.24 5 9.31 5 8.92c0-.22.08-.42.5-.42z"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://web.telegram.org/"
+                    target="_blank"
+                    aria-label="Telegram"
+                    class="telegram"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <g fill="none">
+                        <g clip-path="url(#SVGXv8lpc2Y)">
+                          <path
+                            fill-rule="evenodd"
+                            d="M24 12c0 6.627-5.373 12-12 12S0 18.627 0 12S5.373 0 12 0s12 5.373 12 12M12.43 8.859q-1.75.728-6.998 3.014q-.852.339-.893.663c-.046.366.412.51 1.034.705l.263.084c.613.199 1.437.432 1.865.441q.583.012 1.302-.48q4.902-3.31 5.061-3.346c.075-.017.179-.039.249.024c.07.062.063.18.056.212c-.046.193-1.84 1.862-2.77 2.726c-.29.269-.495.46-.537.504q-.143.145-.282.279c-.57.548-.996.96.024 1.632c.49.323.882.59 1.273.856c.427.291.853.581 1.405.943q.21.14.405.28c.497.355.944.673 1.496.623c.32-.03.652-.331.82-1.23c.397-2.126 1.179-6.73 1.36-8.628a2 2 0 0 0-.02-.472a.5.5 0 0 0-.172-.325c-.143-.117-.365-.142-.465-.140c-.451.008-1.143.249-4.476 1.635"
+                            clip-rule="evenodd"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="SVGXv8lpc2Y">
+                            <path fill="#fff" d="M0 0h24v24H0z" />
+                          </clipPath>
+                        </defs>
+                      </g>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/"
+                    target="_blank"
+                    aria-label="YouTube"
+                    class="youtube"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                      <path
+                        d="M11.603 9.833L9.357 8.785C9.161 8.694 9 8.796 9 9.013v1.974c0 .217.161.319.357.228l2.245-1.048c.197-.092.197-.242.001-.334M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6s9.6-4.298 9.6-9.6S15.302.4 10 .4m0 13.5c-4.914 0-5-.443-5-3.9s.086-3.9 5-3.9s5 .443 5 3.9s-.086 3.9-5 3.9"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.tiktok.com/ru-RU/"
+                    target="_blank"
+                    aria-label="TikTok"
+                    class="tiktok"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path
+                        d="M12 2a10 10 0 1 0 10 10A10.01 10.01 0 0 0 12 2m5.939 7.713v.646a.37.37 0 0 1-.38.37a5.36 5.36 0 0 1-2.903-1.108v4.728a3.94 3.94 0 0 1-1.18 2.81a4 4 0 0 1-2.87 1.17a4.1 4.1 0 0 1-2.862-1.17a3.98 3.98 0 0 1-1.026-3.805c.159-.642.48-1.232.933-1.713a3.58 3.58 0 0 1 2.79-1.313h.82v1.703a.348.348 0 0 1-.39.348a1.918 1.918 0 0 0-1.23 3.631c.27.155.572.246.882.267c.24.01.48-.02.708-.092a1.93 1.93 0 0 0 1.313-1.816V5.754a.36.36 0 0 1 .359-.36h1.415a.36.36 0 0 1 .359.34a3.3 3.3 0 0 0 1.282 2.245a3.25 3.25 0 0 0 1.641.636a.37.37 0 0 1 .338.35z"
+                      />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="copyright">
+              <p>&copy; 2025 ElecBrain. Все права защищены.</p>
+              <div class="footer--links">
+                <a href="privacy.html">Политика конфиденциальности</a>
+                <a href="terms.html">Условия использования</a>
+                <a href="#">Карта сайта</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // Скрипт переключения темы
+      const themeToggle = document.querySelector(".theme-toggle");
+      const body = document.body;
+
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        body.setAttribute("data-theme", savedTheme);
+      }
+
+      themeToggle.addEventListener("click", () => {
+        const currentTheme = body.getAttribute("data-theme");
+        const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+        body.setAttribute("data-theme", newTheme);
+        localStorage.setItem("theme", newTheme);
+      });
+
+      // Бургер меню
+      const burgerMenu = document.querySelector(".burger-menu");
+      const mobileNav = document.querySelector(".mobile-nav");
+      const overlay = document.querySelector(".overlay");
+
+      burgerMenu.addEventListener("click", () => {
+        burgerMenu.classList.toggle("active");
+        mobileNav.classList.toggle("active");
+        overlay.classList.toggle("active");
+        document.body.style.overflow = burgerMenu.classList.contains("active")
+          ? "hidden"
+          : "";
+      });
+
+      overlay.addEventListener("click", () => {
+        burgerMenu.classList.remove("active");
+        mobileNav.classList.remove("active");
+        overlay.classList.remove("active");
+        document.body.style.overflow = "";
+      });
+
+      // Переключение вкладок
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+
+          // Убираем активный класс у всех ссылок и вкладок
+          document
+            .querySelectorAll(".nav-link")
+            .forEach((l) => l.classList.remove("active"));
+          document
+            .querySelectorAll(".tab-content")
+            .forEach((tab) => tab.classList.remove("active"));
+
+          // Добавляем активный класс текущей ссылке
+          link.classList.add("active");
+
+          // Показываем соответствующую вкладку
+          const tabId = link.getAttribute("data-tab");
+          document.getElementById(tabId).classList.add("active");
+        });
+      });
+
+      // Удаление из списка желаний
+      document.querySelectorAll(".remove-item").forEach((button) => {
+        button.addEventListener("click", function () {
+          const wishlistItem = this.closest(".wishlist-item");
+          const productName = wishlistItem.querySelector("h4").textContent;
+
+          // Анимация удаления
+          wishlistItem.style.transform = "translateX(100%)";
+          wishlistItem.style.opacity = "0";
+
+          setTimeout(() => {
+            wishlistItem.remove();
+            // Здесь можно добавить уведомление об удалении
+            showNotification(`Товар "${productName}" удален из списка желаний`);
+          }, 300);
+        });
+      });
+
+      // Функция показа уведомления
+      function showNotification(message) {
+        const notification = document.createElement("div");
+        notification.style.cssText = `
+    position: fixed;
+    top: 15px;
+    right:1px;
+    background: #dc3545;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    z-index: 1005;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    @media (max-width)
+  `;
+        notification.textContent = message;
+        document.body.appendChild(notification);
+
+        // Анимация появления
+        setTimeout(() => {
+          notification.style.transform = "translateX(0)";
+        }, 100);
+
+        // Автоматическое скрытие через 3 секунды
+        setTimeout(() => {
+          notification.style.transform = "translateX(100%)";
+          setTimeout(() => {
+            notification.remove();
+          }, 300);
+        }, 3000);
+      }
+
+      // Добавление в корзину из списка желаний
+      document.querySelectorAll(".add-to-cart").forEach((button) => {
+        button.addEventListener("click", () => {
+          const productName = button
+            .closest(".wishlist-item-info")
+            .querySelector("h4").textContent;
+          alert(`Товар "${productName}" добавлен в корзину!`);
+        });
+      });
+
+      // Сохранение профиля
+      document
+        .querySelector(".profile-form")
+        .addEventListener("submit", (e) => {
+          e.preventDefault();
+          alert("Изменения успешно сохранены!");
+        });
+    </script>
+  </body>
+</html>
